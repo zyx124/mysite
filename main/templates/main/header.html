@@ -10,48 +10,21 @@
     <!-- Compiled and manified JavaScript for Materialize CSS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
+
+
 <body>
-  <nav>
+    <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
+      <a href="/" class="brand-logo">Tutorials</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="/">Home</a></li>
-        <li><a href="https://discord.gg/sentdex">Community</a></li>
-        <li><a href="/login">Login</a></li>
-        <li><a href="/register">Register</a></li>
+        {% include 'main/includes/navbaritems.html' %}
       </ul>
     </div>
   </nav>
 
-  <ul id="nav-mobile" class="right hide-on-med-and-down">
 
-      <li><a href="/">Home</a></li>
-      <li><a href="https://discord.gg/sentdex">Community</a> </li>
-      {% if user.is_authenticated %}
-        <li><a href="/account">{{ user.username|title }}</a> </li>
-        <li><a href="/logout">Logout</a></li>
-      {% else %}
-        <li><a href="/login">Login</a></li>
-        <li><a href="/register">Register</a> </li>
-      {% endif %}
-      <li><a href="/login">Login</a></li>
-      <li><a href="/register">Register</a></li>
+  {% include 'main/includes/messaging.html' %}
 
-  </ul>
-
-  {%  if messages %}
-    {% for message in messages %}
-        {% if message.tags == 'success' %}
-            <script>M.toast({html: "{{ message }}", classes: 'green rounded', displayLength:2000});</script>
-        {% elif message.tags == 'info' %}
-            <script>M.toast({html: "{{ message }}", classes: 'blue rounded', displayLength:2000});</script>
-        {% elif message.tags == 'warning' %}
-            <script>M.toast({html: "{{ message }}", classes: 'orange rounded', displayLength:10000});</script>
-        {% elif message.tags == 'error' %}
-            <script>M.toast({html: "{{ message }}", classes: 'red rounded', displayLength:10000});</script>
-        {% endif %}
-    {% endfor %}
-  {% endif %}
 
   <div class="container">
     {% block content %}
