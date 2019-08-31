@@ -7,7 +7,7 @@ class TutorialCategory(models.Model):
 
     tutorial_category = models.CharField(max_length=200)
     category_summary = models.CharField(max_length=200)
-    category_slug = models.CharField(max_length=200, default=1)
+    category_slug = models.CharField(max_length=200)
 
     class Meta:
         verbose_name_plural = "Categories"
@@ -18,12 +18,11 @@ class TutorialCategory(models.Model):
 
 class TutorialSeries(models.Model):
     tutorial_series = models.CharField(max_length=200)
-
-    tutorial_category = models.ForeignKey(TutorialCategory, default=1, verbose_name="Category", on_delete=models.SET_DEFAULT)
+    tutorial_category = models.ForeignKey(TutorialCategory, default=1,verbose_name="Category", on_delete=models.SET_DEFAULT)
     series_summary = models.CharField(max_length=200)
 
     class Meta:
-        # otherwise we get "Tutorial Series in admin"
+        # otherwise we get "Tutorial Seriess in admin"
         verbose_name_plural = "Series"
 
     def __str__(self):
@@ -34,7 +33,7 @@ class Tutorial(models.Model):
     tutorial_title = models.CharField(max_length=200)
     tutorial_content = models.TextField()
     tutorial_published = models.DateTimeField('date published')
-    tutorial_series = models.ForeignKey(TutorialSeries, default=1, verbose_name="Series", on_delete=models.SET_DEFAULT)
+    tutorial_series = models.ForeignKey(TutorialSeries, default= 1, verbose_name="Series", on_delete=models.SET_DEFAULT)
     tutorial_slug = models.CharField(max_length=200, default=1)
 
     def __str__(self):
