@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '#6b0o@u6g-^$=@=qzcb$hwdk8%z0_kl^07d7o=x%olgf@iufqm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['yuxinzhao.pythonanywhere.com']
 
 
 # Application definition
@@ -120,6 +120,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/home/yuxinzhao/mysite/static/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = '/home/yuxinzhao/mysite/media/'
+
 
 TINYMCE_DEFAULT_CONFIG = {
     'height': 360,
