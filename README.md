@@ -1,6 +1,6 @@
 # mysite
 
-A site created using Django and python. It is deployed [here](yuxinzhao.pythonanywhere.com). Welcome to click on it.
+A site created using Django and python. It is deployed [here](https://yuxinzhao.pythonanywhere.com). Welcome to click on it.
 
 Register, log in and out function is available. 
 
