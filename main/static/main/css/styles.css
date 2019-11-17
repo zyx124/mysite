@@ -68,8 +68,8 @@ a img{
 
 
 .android-header {
-  overflow: no-display;
-  background-color: black;
+  overflow: visible;
+  background-color: white;
 }
 
   .android-header .material-icons {
@@ -104,8 +104,7 @@ a img{
     -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    width: 200px;
-    background-color: transparent !important;
+    width: 400px;
   }
 
   .android-search-box.is-focused + .android-navigation-container {
