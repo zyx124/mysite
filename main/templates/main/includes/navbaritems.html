@@ -1,5 +1,5 @@
 <nav style="box-shadow: none">
-    <div class="right android-navigation">
+    <div class="right">
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><i class="medium material-icons">search &nbsp;</i></li>
 
@@ -7,14 +7,14 @@
             <form method="get" id="searchform" style="height: 50px;" action=""><input name="q" id="search" type="search" placeholder="search" style="font-size: 16px; color: white; font-family: Zilla Slab"></form>
         </li>
         <li>&nbsp;&nbsp;</li>
-        <li><a class="mdl-navigation__link" href="/" style="font-family: Zilla Slab">Home</a></li>
-        <li><a class="mdl-navigation__link" href="https://github.com/zyx124" style="font-family: Zilla Slab">Github</a> </li>
+        <li><a class="hoverable" href="/" style="font-family: Zilla Slab">Home</a></li>
+        <li><a class="hoverable" href="https://github.com/zyx124" style="font-family: Zilla Slab">Github</a> </li>
       {% if user.is_authenticated %}
-        <li><a class="mdl-navigation__link" href="/account" style="font-family: Zilla Slab">{{ user.username|title }}</a> </li>
-        <li><a class="mdl-navigation__link" href="/logout" style="font-family: Zilla Slab">Logout</a></li>
+        <li><a class="hoverable" href="/account" style="font-family: Zilla Slab">{{ user.username|title }}</a> </li>
+        <li><a class="hoverable" href="/logout" style="font-family: Zilla Slab">Logout</a></li>
       {% else %}
-        <li><a class="mdl-navigation__link" href="/login" style="font-family: Zilla Slab">Login</a></li>
-        <li><a class="mdl-navigation__link" href="/register" style="font-family: Zilla Slab">Register</a> </li>
+        <li><a class="hoverable" href="/login" style="font-family: Zilla Slab">Login</a></li>
+        <li><a class="hoverable" href="/register" style="font-family: Zilla Slab">Register</a> </li>
       {% endif %}
 
       </ul>
