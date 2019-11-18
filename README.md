@@ -9,5 +9,7 @@ Register, log in and out function is available.
 Still under development.
 
 TO DO:
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked="">improve HTML and CSS</li>
-<li class="task-list-item"><input type="checkbox" id="" disabled="" class="task-list-item-checkbox" checked="">Add email function </li>
+- Improve HTML and CSS displays
+- Add email function
+- Set the content search engine
+- Add comment function.
