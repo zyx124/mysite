@@ -21,7 +21,14 @@
     <!-- Compiled and manified JavaScript for Materialize CSS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, options);
+        });
+    </script>
 
 
 </head>
@@ -32,11 +39,23 @@
         <nav>
             <div class="container" style="box-shadow: none">
                 <a href="/" class="brand-logo" style="font-family: Special Elite">&nbsp; Yuxin Zhao</a>
-
-                {% include 'main/includes/navbaritems.html' %}
-
+                <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+                    <i class="material-icons">menu</i>
+                    </a>
+                <nav style="box-shadow: none">
+                    {% include 'main/includes/navbaritems.html' %}
+                </nav>
             </div>
         </nav>
+
+        <ul class="sidenav" id="mobile-nav">
+
+            <li><a href="#">Home</a></li>
+			<li><a href="#">Video</a></li>
+			<li><a href="#">Service</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Contact</a></li>
+        </ul>
 
 
 
