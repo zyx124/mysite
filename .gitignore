@@ -96,4 +96,10 @@ blog/__pycache__/**
 main/__pycache__/**
 .idea/**
 
+blog/templatetags/__pycache__/**
+
+
+
+
+
 # End of https://www.gitignore.io/api/pycharm
