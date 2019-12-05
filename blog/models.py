@@ -42,7 +42,7 @@ class Post(models.Model):
 
         # take the first 54 words to automatically generate the excerpt
         # strip_tags is used to exclude the HTML tags.
-        self.excerpt = strip_tags(md.convert(self.body))[:554]
+        self.excerpt = strip_tags(md.convert(self.body))[:50]
         super().save(*args, **kwargs)
 
     def __str__(self):
