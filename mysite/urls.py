@@ -19,7 +19,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('tinymce/', include('tinymce.urls')),
-    path("", include('main.urls')),
+    path("", include('blog.urls')),
     path('admin/', admin.site.urls),
+    path('', include('comments.urls'))
 
 ]

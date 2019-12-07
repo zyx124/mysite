@@ -97,7 +97,9 @@ main/__pycache__/**
 .idea/**
 
 blog/templatetags/__pycache__/**
-
+blog/migrations/__pycache__/**
+comments/migrations/__pycache__/**
+comments/templatetags/__pycache__/**
 
 
 
