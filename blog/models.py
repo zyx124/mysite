@@ -51,3 +51,6 @@ class Post(models.Model):
     #self defined url getting method
     def get_absolute_url(self):
         return reverse('blog:detail', kwargs={'pk': self.pk})
+
+    class Meta:
+        ordering = ['-created_time']

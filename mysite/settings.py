@@ -21,13 +21,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-with open('/home/yuxinzhao/secret_key.txt') as f:
+with open('/home/zyx/secret_key.txt') as f:
     SECRET_KEY = f.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['yuxinzhao.pythonanywhere.com']
+ALLOWED_HOSTS = ['yuxinzhao.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
     'tinymce',
+    'blog.apps.BlogConfig',
+    'comments.apps.CommentsConfig',
 ]
 
 MIDDLEWARE = [
@@ -122,9 +124,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/home/yuxinzhao/mysite/static/'
+STATIC_ROOT = '/home/zyx/mysite/static/'
 MEDIA_URL = '/media/'
-MEDIA_ROOT = '/home/yuxinzhao/mysite/media/'
+MEDIA_ROOT = '/home/zyx/mysite/media/'
 
 
 TINYMCE_DEFAULT_CONFIG = {

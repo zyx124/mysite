@@ -100,8 +100,7 @@ blog/templatetags/__pycache__/**
 blog/migrations/__pycache__/**
 comments/migrations/__pycache__/**
 comments/templatetags/__pycache__/**
-
-
-
+comments/__pycache__/**
+db.sqlite3
 
 # End of https://www.gitignore.io/api/pycharm
