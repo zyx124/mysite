@@ -45,3 +45,7 @@ def detail(request, pk):
     post.toc = m.group(1) if m is not None else ''
 
     return render(request, 'blog/detail.html', context={'post': post})
+
+
+def contact(request):
+    return render(request, 'blog/contact.html')
