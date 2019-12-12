@@ -11,8 +11,18 @@
                     <span class="post-date"><a href="#"><time class="entry-date"
                                                               datetime="{{ post.created_time }}">{{ post.created_time }}</time></a></span>
                     <span class="post-author"><a href="#">{{ post.author }}</a></span>
-                    <span class="comments-link"><a href="#comment-area">{{ post.comment_set.count }} comment(s)</a></span>
-                    <span class="views-count"><a href="#"> {{ post.comment_set.count }}</a></span>
+                    <span class="comments-link"><a href="#comment-area">{{ post.comment_set.count }} {% if post.comment_set.count > 1 %}
+                            comments
+                        {% else %}
+                            comment
+                        {% endif %}</a></span>
+                    <span class="views-count"><a href="{{ post.get_absolute_url }}"> {{ post.views }}
+                        {% if post.views > 1 %}
+                            views
+                        {% else %}
+                            view
+                        {% endif %}
+                            </a></span>
                 </div>
             </header>
             <div class="entry-content clearfix">
